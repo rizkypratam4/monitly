@@ -55,3 +55,4 @@
 2026-03-16 15:19:46,536 [INFO]    Interval: 10 detik
 2026-03-16 15:19:46,536 [INFO] ==================================================
 2026-03-16 15:19:46,809 [INFO] Static info loaded: PC-Denis | 10.4.1.11 | rizky
+2026-03-16 15:45:29,866 [ERROR] ❌ Tidak bisa terhubung ke server: http://10.4.1.11:8000/api/metrics
