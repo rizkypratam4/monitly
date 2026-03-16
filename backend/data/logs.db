@@ -1,0 +1,29 @@
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773389637181,"_id":"1HZ0sL8F2IaE0053"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773391407718,"_id":"1f0lpMqWPvvMw3uM"}
+{"level":"info","category":"auth","message":"Login berhasil: admin","timestamp":1773381374392,"_id":"4KbVRjQPIC5eYdxM"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773404251132,"_id":"6UbYv5DccHNLnraR"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Disk hampir penuh: 98.2","timestamp":1773374227775,"_id":"89BYvQgEGwyJiLmv"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773398699644,"_id":"BO5JzJsFW9vC5UuV"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773407371994,"_id":"Ck14aDKSH4EdShrl"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773388946963,"_id":"D1NckliCqIPx5B8u"}
+{"level":"info","category":"auth","message":"Login berhasil: admin","timestamp":1773381383744,"_id":"LijmuWre4CYqnsMe"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773382645219,"_id":"NUK7dACBqbbOCRxi"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773401820441,"_id":"PpAUTFqqUMTwIRTk"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773383395436,"_id":"RIEzwHIKNqY3Us4c"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773403260879,"_id":"VSRjY1lqyKYrYQMa"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773399059737,"_id":"W16VwDrWG3PHcjxu"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773392878105,"_id":"WBZKe98hQyS6SA2N"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773399299786,"_id":"WQEINBGDKAnlKZpT"}
+{"level":"warning","category":"auth","message":"Login gagal: admin","timestamp":1773381390430,"_id":"WVsLiofAA1LHvhep"}
+{"level":"warning","category":"auth","message":"Login gagal: sadasdasd","timestamp":1773381365384,"_id":"XBqNiwRgCgPO0Etb"}
+{"device_id":"PC-Denis","level":"error","category":"system","message":"PC terdeteksi offline","timestamp":1773622354402,"_id":"ZABBL7hUPyfj0zx1"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773389517155,"_id":"a3Q36NgDveAijlDt"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773394678558,"_id":"d77mCnAPqLChhmFt"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773390747529,"_id":"lHxk9CQRwRxGTvtj"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773407071907,"_id":"lvS5msYYMhOWlJxM"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773390387394,"_id":"q5j3foMZaSAJK3Kp"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773394798587,"_id":"txTCzkbocFz1j12Z"}
+{"$$indexCreated":{"fieldName":"device_id","unique":false,"sparse":false}}
+{"$$indexCreated":{"fieldName":"timestamp","unique":false,"sparse":false}}
+{"level":"info","category":"auth","message":"Login berhasil: admin","timestamp":1773624493464,"_id":"R2dqjuidF3sT2ezH"}
+{"device_id":"PC-Denis","level":"error","category":"alert","message":"[CRITICAL] Packet loss terdeteksi: 33.0","timestamp":1773624759941,"_id":"aFTFsEKz9KE5FgJM"}

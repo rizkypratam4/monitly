@@ -1,0 +1,13 @@
+# Environment variables — JANGAN diupload ke GitHub
+.env
+.env.local
+.env.production
+
+# Database files (data sensitif)
+data/
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log
