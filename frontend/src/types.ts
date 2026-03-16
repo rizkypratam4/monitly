@@ -19,20 +19,23 @@ export interface PC {
   offlineDuration?: number; // in seconds
 }
 
+
+
 export interface PCMetrics {
   pcId: string;
-  cpuUsage: number; // 0-100
-  ramUsage: number; // 0-100
-  diskUsage: number; // 0-100
-  diskRead: number; // MB/s
-  diskWrite: number; // MB/s
-  ping: number; // ms
-  bandwidthDown: number; // Mbps
-  bandwidthUp: number; // Mbps
-  packetLoss: number; // 0-100
+  cpuUsage: number;
+  ramUsage: number;
+  diskUsage: number;
+  diskRead: number;
+  diskWrite: number;
+  ping: number;
+  bandwidthDown: number;
+  bandwidthUp: number;
+  packetLoss: number;
   timestamp: number;
+  diskPartitions?: { name: string; type: string; used_gb: number; total_gb: number }[];
+  gateway?: string;
 }
-
 export interface Alert {
   id: string;
   pcId: string;

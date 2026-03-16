@@ -47,6 +47,8 @@ export interface MetricRaw {
   ping_ms: number;
   packet_loss: number;
   timestamp: number;
+  disk_partitions?: { name: string; type: string; used_gb: number; total_gb: number }[];
+  gateway?: string;
 }
 
 export interface ProcessRaw {
@@ -191,20 +193,21 @@ export function mapMetric(d: DeviceRaw): PCMetrics {
 
 export function mapMetricRaw(m: MetricRaw, hostname: string): PCMetrics {
   return {
-    pcId: hostname,
-    cpuUsage: m.cpu_percent || 0,
-    ramUsage: m.ram_percent || 0,
-    diskUsage: m.disk_percent || 0,
-    diskRead: m.disk_read || 0,
-    diskWrite: m.disk_write || 0,
-    ping: m.ping_ms || 0,
-    bandwidthDown: m.net_download || 0,
-    bandwidthUp: m.net_upload || 0,
-    packetLoss: m.packet_loss || 0,
-    timestamp: m.timestamp || Date.now(),
+    pcId:           hostname,
+    cpuUsage:       m.cpu_percent   || 0,
+    ramUsage:       m.ram_percent   || 0,
+    diskUsage:      m.disk_percent  || 0,
+    diskRead:       m.disk_read     || 0,
+    diskWrite:      m.disk_write    || 0,
+    ping:           m.ping_ms       || 0,
+    bandwidthDown:  m.net_download  || 0,
+    bandwidthUp:    m.net_upload    || 0,
+    packetLoss:     m.packet_loss   || 0,
+    timestamp:      m.timestamp     || Date.now(),
+    diskPartitions: m.disk_partitions || [], // ← tambah
+    gateway:        m.gateway         || 'N/A', // ← tambah
   };
 }
-
 export function mapAlert(a: AlertRaw): Alert {
   return {
     id: a._id,

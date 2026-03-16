@@ -21,3 +21,37 @@
 2026-03-16 09:13:24,707 [INFO]    Interval: 10 detik
 2026-03-16 09:13:24,707 [INFO] ==================================================
 2026-03-16 09:13:24,959 [INFO] Static info loaded: PC-Denis | 10.4.1.11 | rizky
+2026-03-16 11:47:47,459 [INFO] ==================================================
+2026-03-16 11:47:47,460 [INFO] 🚀 NetWatch Agent started
+2026-03-16 11:47:47,460 [INFO]    Server : http://10.4.1.11:8000/api/metrics
+2026-03-16 11:47:47,460 [INFO]    Interval: 10 detik
+2026-03-16 11:47:47,460 [INFO] ==================================================
+2026-03-16 11:47:47,709 [INFO] Static info loaded: PC-Denis | 10.4.1.11 | rizky
+2026-03-16 12:30:03,724 [INFO] ==================================================
+2026-03-16 12:30:03,724 [INFO] 🚀 NetWatch Agent started
+2026-03-16 12:30:03,724 [INFO]    Server : http://10.4.1.11:8000/api/metrics
+2026-03-16 12:30:03,724 [INFO]    Interval: 10 detik
+2026-03-16 12:30:03,724 [INFO] ==================================================
+2026-03-16 12:30:04,008 [INFO] Static info loaded: PC-Denis | 10.4.1.11 | rizky
+2026-03-16 12:41:32,861 [ERROR] ❌ Tidak bisa terhubung ke server: http://10.4.1.11:8000/api/metrics
+2026-03-16 12:41:48,628 [ERROR] ❌ Tidak bisa terhubung ke server: http://10.4.1.11:8000/api/metrics
+2026-03-16 12:42:04,612 [ERROR] ❌ Tidak bisa terhubung ke server: http://10.4.1.11:8000/api/metrics
+2026-03-16 12:42:20,411 [ERROR] ❌ Tidak bisa terhubung ke server: http://10.4.1.11:8000/api/metrics
+2026-03-16 12:42:36,212 [ERROR] ❌ Tidak bisa terhubung ke server: http://10.4.1.11:8000/api/metrics
+2026-03-16 12:42:36,213 [WARNING] ⚠️  5x gagal kirim berturut-turut
+2026-03-16 12:42:51,977 [ERROR] ❌ Tidak bisa terhubung ke server: http://10.4.1.11:8000/api/metrics
+2026-03-16 12:42:51,977 [WARNING] ⚠️  6x gagal kirim berturut-turut
+2026-03-16 12:43:07,748 [ERROR] ❌ Tidak bisa terhubung ke server: http://10.4.1.11:8000/api/metrics
+2026-03-16 12:43:07,748 [WARNING] ⚠️  7x gagal kirim berturut-turut
+2026-03-16 12:43:23,491 [ERROR] ❌ Tidak bisa terhubung ke server: http://10.4.1.11:8000/api/metrics
+2026-03-16 12:43:23,491 [WARNING] ⚠️  8x gagal kirim berturut-turut
+2026-03-16 12:43:39,263 [ERROR] ❌ Tidak bisa terhubung ke server: http://10.4.1.11:8000/api/metrics
+2026-03-16 12:43:39,263 [WARNING] ⚠️  9x gagal kirim berturut-turut
+2026-03-16 12:43:55,017 [ERROR] ❌ Tidak bisa terhubung ke server: http://10.4.1.11:8000/api/metrics
+2026-03-16 12:43:55,017 [WARNING] ⚠️  10x gagal kirim berturut-turut
+2026-03-16 15:19:46,535 [INFO] ==================================================
+2026-03-16 15:19:46,536 [INFO] 🚀 NetWatch Agent started
+2026-03-16 15:19:46,536 [INFO]    Server : http://10.4.1.11:8000/api/metrics
+2026-03-16 15:19:46,536 [INFO]    Interval: 10 detik
+2026-03-16 15:19:46,536 [INFO] ==================================================
+2026-03-16 15:19:46,809 [INFO] Static info loaded: PC-Denis | 10.4.1.11 | rizky

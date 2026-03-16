@@ -146,7 +146,7 @@ def get_network_stats():
     if _prev_net is None:
         _prev_net = current
         _prev_net_time = current_time
-        return {"download_mbps": 0, "upload_mbps": 0, "ping_ms": None, "packet_loss": 0}
+        return {"download_mbps": 0, "upload_mbps": 0, "ping_ms": None, "packet_loss": 0, "gateway": "N/A"}
 
     elapsed = current_time - _prev_net_time
     if elapsed <= 0:
@@ -158,11 +158,10 @@ def get_network_stats():
     _prev_net = current
     _prev_net_time = current_time
 
-    # Ping ke gateway
-    ping_ms   = None
-    pkt_loss  = 0
+    # Ping ke 8.8.8.8
+    ping_ms  = None
+    pkt_loss = 0
     try:
-        gateway = psutil.net_if_stats()
         if platform.system() == "Windows":
             result = subprocess.run(
                 ["ping", "-n", "3", "8.8.8.8"],
@@ -173,12 +172,18 @@ def get_network_stats():
                     parts = line.split("=")
                     if parts:
                         val = parts[-1].strip().replace("ms", "").strip()
-                        ping_ms = float(val)
+                        try:
+                            ping_ms = float(val)
+                        except:
+                            pass
                 if "Lost" in line or "Hilang" in line:
                     parts = line.split("(")
                     if len(parts) > 1:
-                        pct = parts[1].split("%")[0]
-                        pkt_loss = float(pct)
+                        try:
+                            pct = parts[1].split("%")[0]
+                            pkt_loss = float(pct)
+                        except:
+                            pass
         else:
             result = subprocess.run(
                 ["ping", "-c", "3", "8.8.8.8"],
@@ -186,11 +191,45 @@ def get_network_stats():
             )
             for line in result.stdout.splitlines():
                 if "avg" in line:
-                    avg = line.split("/")[4]
-                    ping_ms = float(avg)
+                    try:
+                        avg = line.split("/")[4]
+                        ping_ms = float(avg)
+                    except:
+                        pass
                 if "packet loss" in line:
-                    pct = line.split("%")[0].split()[-1]
-                    pkt_loss = float(pct)
+                    try:
+                        pct = line.split("%")[0].split()[-1]
+                        pkt_loss = float(pct)
+                    except:
+                        pass
+    except:
+        pass
+
+    # Gateway
+    gateway = "N/A"
+    try:
+        if platform.system() == "Windows":
+            result = subprocess.run(
+                ["ipconfig"], capture_output=True, text=True, timeout=5
+            )
+            for line in result.stdout.splitlines():
+                if "Default Gateway" in line or "Gateway Bawaan" in line:
+                    parts = line.split(":")
+                    if len(parts) > 1 and parts[1].strip() and parts[1].strip() != "":
+                        gw = parts[1].strip()
+                        if gw and gw != "":
+                            gateway = gw
+                            break
+        else:
+            result = subprocess.run(
+                ["ip", "route"], capture_output=True, text=True, timeout=5
+            )
+            for line in result.stdout.splitlines():
+                if line.startswith("default"):
+                    parts = line.split()
+                    if len(parts) >= 3:
+                        gateway = parts[2]
+                        break
     except:
         pass
 
@@ -199,7 +238,52 @@ def get_network_stats():
         "upload_mbps":   round(max(0, upload_mbps), 2),
         "ping_ms":       ping_ms,
         "packet_loss":   pkt_loss,
+        "gateway":       gateway,
     }
+
+def get_disk_partitions():
+    partitions = []
+    try:
+        for part in psutil.disk_partitions(all=False):
+            # Skip yang bukan physical drive
+            if not part.mountpoint:
+                continue
+            if platform.system() == "Windows":
+                # Skip drive CD/DVD
+                if part.fstype == "" or part.fstype == "UDF":
+                    continue
+            try:
+                usage = psutil.disk_usage(part.mountpoint)
+                # Deteksi SSD/HDD di Windows
+                drive_type = "HDD"
+                try:
+                    if platform.system() == "Windows":
+                        drive_letter = part.device.replace("\\", "").replace(":", "")
+                        result = subprocess.run(
+                            ["powershell", "-Command",
+                             f"Get-PhysicalDisk | Where-Object {{$_.DeviceID -eq (Get-Partition -DriveLetter {drive_letter} -ErrorAction SilentlyContinue | Get-Disk -ErrorAction SilentlyContinue).Number}} | Select-Object -ExpandProperty MediaType"],
+                            capture_output=True, text=True, timeout=5
+                        )
+                        media_type = result.stdout.strip()
+                        if "SSD" in media_type:
+                            drive_type = "SSD"
+                        elif "NVMe" in media_type:
+                            drive_type = "NVMe"
+                except:
+                    pass
+
+                partitions.append({
+                    "name":     part.device.replace("\\", "").rstrip(":") + ":",
+                    "type":     drive_type,
+                    "used_gb":  round(usage.used  / 1e9, 1),
+                    "total_gb": round(usage.total / 1e9, 1),
+                    "percent":  round(usage.percent, 1),
+                })
+            except (PermissionError, OSError):
+                pass
+    except:
+        pass
+    return partitions
 
 def get_processes():
     procs = []
@@ -242,21 +326,72 @@ def get_connections():
         pass
     return conns[:30]
 
+
+def get_active_activity():
+    activity = []
+    try:
+        # Ambil koneksi dengan info proses
+        for conn in psutil.net_connections(kind='inet'):
+            if conn.status != 'ESTABLISHED':
+                continue
+            if not conn.raddr:
+                continue
+
+            # Cari nama proses dari PID
+            proc_name = "Unknown"
+            try:
+                if conn.pid:
+                    proc = psutil.Process(conn.pid)
+                    proc_name = proc.name()
+            except:
+                pass
+
+            # Skip koneksi lokal
+            remote_ip = conn.raddr.ip
+            if remote_ip.startswith('127.') or remote_ip.startswith('::1'):
+                continue
+
+            activity.append({
+                "process":     proc_name,
+                "remote_ip":   remote_ip,
+                "remote_port": conn.raddr.port,
+                "protocol":    "HTTPS" if conn.raddr.port == 443
+                               else "HTTP" if conn.raddr.port == 80
+                               else "RDP"  if conn.raddr.port == 3389
+                               else "DNS"  if conn.raddr.port == 53
+                               else str(conn.raddr.port),
+                "local_port":  conn.laddr.port if conn.laddr else 0,
+            })
+    except:
+        pass
+    return activity
+
 # ── Kumpulkan semua metrik ───────────────────────────────────
 def collect_metrics():
-    static = get_static_info()
-    vm     = psutil.virtual_memory()
-    disk   = psutil.disk_usage('C:\\' if platform.system() == 'Windows' else '/')
+    static  = get_static_info()
+    vm      = psutil.virtual_memory()
+    network = get_network_stats()
+    partitions = get_disk_partitions()
 
     try:
-        disk_io  = psutil.disk_io_counters()
+        main_disk = psutil.disk_usage('C:\\' if platform.system() == 'Windows' else '/')
+        disk_percent = round(main_disk.percent, 1)
+        disk_used    = round(main_disk.used  / 1e9, 1)
+        disk_total   = round(main_disk.total / 1e9, 1)
+    except:
+        disk_percent = 0
+        disk_used    = 0
+        disk_total   = 0
+
+    # Disk I/O
+    try:
+        disk_io    = psutil.disk_io_counters()
         read_mbps  = round(disk_io.read_bytes  / 1e6, 2) if disk_io else 0
         write_mbps = round(disk_io.write_bytes / 1e6, 2) if disk_io else 0
     except:
         read_mbps = write_mbps = 0
 
-    network   = get_network_stats()
-    processes = get_processes()
+    processes   = get_processes()
     connections = get_connections()
 
     return {
@@ -266,21 +401,29 @@ def collect_metrics():
             "count":   psutil.cpu_count(),
         },
         "ram": {
-            "percent": round(vm.percent, 1),
-            "used_gb": round(vm.used / 1e9, 1),
+            "percent":  round(vm.percent, 1),
+            "used_gb":  round(vm.used  / 1e9, 1),
             "total_gb": round(vm.total / 1e9, 1),
         },
         "disk": {
-            "percent":    round(disk.percent, 1),
-            "used_gb":    round(disk.used / 1e9, 1),
-            "total_gb":   round(disk.total / 1e9, 1),
+            "percent":    disk_percent,
+            "used_gb":    disk_used,
+            "total_gb":   disk_total,
             "read_mbps":  read_mbps,
             "write_mbps": write_mbps,
+            "partitions": partitions,
         },
-        "network": network,
-        "processes": processes,
+        "network": {
+            "download_mbps": network["download_mbps"],
+            "upload_mbps":   network["upload_mbps"],
+            "ping_ms":       network["ping_ms"],
+            "packet_loss":   network["packet_loss"],
+            "gateway":       network["gateway"],
+        },
+        "processes":   processes,
         "connections": connections,
-        "timestamp": int(time.time()),
+        "timestamp":   int(time.time()),
+        "activity": get_active_activity(),
     }
 
 # ── Kirim ke server ──────────────────────────────────────────
