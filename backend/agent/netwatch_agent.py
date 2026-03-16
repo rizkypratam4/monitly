@@ -14,24 +14,29 @@ import logging
 import os
 import subprocess
 import platform
+import sys
 from datetime import datetime
 
 # ── Konfigurasi ─────────────────────────────────────────────
-SERVER_URL   = "http://localhost:8000/api/metrics"  # Ganti IP server
+SERVER_URL   = "http://10.4.1.11:8000/api/metrics"  # Ganti IP server
 INTERVAL     = 10       # Kirim setiap 10 detik
 DEPARTMENT   = "IT"     # Ganti sesuai departemen PC ini
 LOG_FILE     = "netwatch_agent.log"
 RETRY_DELAY  = 5        # Delay retry jika gagal kirim (detik)
 
-# ── Setup logging ────────────────────────────────────────────
+# Setup logging — fix untuk Windows Service (no console)
+LOG_FILE = os.path.join(os.path.dirname(os.path.abspath(
+    sys.executable if getattr(sys, 'frozen', False) else __file__
+)), 'netwatch_agent.log')
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(message)s',
     handlers=[
         logging.FileHandler(LOG_FILE, encoding='utf-8'),
-        logging.StreamHandler(stream=open(1, 'w', encoding='utf-8', closefd=False))
     ]
 )
+
 log = logging.getLogger("NetWatchAgent")
 
 # ── Cache info statis (tidak perlu ambil setiap 10 detik) ───

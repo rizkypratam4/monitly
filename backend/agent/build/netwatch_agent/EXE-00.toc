@@ -1,10 +1,9 @@
 ('C:\\Users\\rizky\\Documents\\Rizky '
- 'Pratama\\App\\netwatch-backend\\agent\\dist\\netwatch_agent.exe',
+ 'Pratama\\App\\monitly\\backend\\agent\\dist\\netwatch_agent.exe',
  False,
  False,
  False,
- 'C:\\Users\\rizky\\Documents\\Rizky '
- 'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\PyInstaller\\bootloader\\images\\icon-windowed.ico',
+ 'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\PyInstaller\\bootloader\\images\\icon-windowed.ico',
  None,
  False,
  False,
@@ -32,55 +31,50 @@
  None,
  None,
  'C:\\Users\\rizky\\Documents\\Rizky '
- 'Pratama\\App\\netwatch-backend\\agent\\build\\netwatch_agent\\netwatch_agent.pkg',
+ 'Pratama\\App\\monitly\\backend\\agent\\build\\netwatch_agent\\netwatch_agent.pkg',
  [('pyi-contents-directory _internal', '', 'OPTION'),
   ('PYZ-00.pyz',
    'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\build\\netwatch_agent\\PYZ-00.pyz',
+   'Pratama\\App\\monitly\\backend\\agent\\build\\netwatch_agent\\PYZ-00.pyz',
    'PYZ'),
   ('struct',
    'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\build\\netwatch_agent\\localpycs\\struct.pyc',
+   'Pratama\\App\\monitly\\backend\\agent\\build\\netwatch_agent\\localpycs\\struct.pyc',
    'PYMODULE'),
   ('pyimod01_archive',
    'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\build\\netwatch_agent\\localpycs\\pyimod01_archive.pyc',
+   'Pratama\\App\\monitly\\backend\\agent\\build\\netwatch_agent\\localpycs\\pyimod01_archive.pyc',
    'PYMODULE'),
   ('pyimod02_importers',
    'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\build\\netwatch_agent\\localpycs\\pyimod02_importers.pyc',
+   'Pratama\\App\\monitly\\backend\\agent\\build\\netwatch_agent\\localpycs\\pyimod02_importers.pyc',
    'PYMODULE'),
   ('pyimod03_ctypes',
    'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\build\\netwatch_agent\\localpycs\\pyimod03_ctypes.pyc',
+   'Pratama\\App\\monitly\\backend\\agent\\build\\netwatch_agent\\localpycs\\pyimod03_ctypes.pyc',
    'PYMODULE'),
   ('pyimod04_pywin32',
    'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\build\\netwatch_agent\\localpycs\\pyimod04_pywin32.pyc',
+   'Pratama\\App\\monitly\\backend\\agent\\build\\netwatch_agent\\localpycs\\pyimod04_pywin32.pyc',
    'PYMODULE'),
   ('pyiboot01_bootstrap',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
    'PYSOURCE'),
   ('pyi_rth_inspect',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
    'PYSOURCE'),
   ('pyi_rth_setuptools',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_setuptools.py',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_setuptools.py',
    'PYSOURCE'),
   ('pyi_rth_pkgutil',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
    'PYSOURCE'),
   ('pyi_rth_multiprocessing',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
    'PYSOURCE'),
   ('netwatch_agent',
    'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\netwatch_agent.py',
+   'Pratama\\App\\monitly\\backend\\agent\\netwatch_agent.py',
    'PYSOURCE'),
   ('python314.dll',
    'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\python314.dll',
@@ -134,20 +128,16 @@
    'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\DLLs\\_socket.pyd',
    'EXTENSION'),
   ('81d243bd2c585b0f4821__mypyc.cp314-win_amd64.pyd',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\81d243bd2c585b0f4821__mypyc.cp314-win_amd64.pyd',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\81d243bd2c585b0f4821__mypyc.cp314-win_amd64.pyd',
    'EXTENSION'),
   ('charset_normalizer\\cd.cp314-win_amd64.pyd',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\charset_normalizer\\cd.cp314-win_amd64.pyd',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\charset_normalizer\\cd.cp314-win_amd64.pyd',
    'EXTENSION'),
   ('charset_normalizer\\md.cp314-win_amd64.pyd',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\charset_normalizer\\md.cp314-win_amd64.pyd',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\charset_normalizer\\md.cp314-win_amd64.pyd',
    'EXTENSION'),
   ('psutil\\_psutil_windows.pyd',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\psutil\\_psutil_windows.pyd',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\psutil\\_psutil_windows.pyd',
    'EXTENSION'),
   ('VCRUNTIME140.dll',
    'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\VCRUNTIME140.dll',
@@ -167,57 +157,46 @@
   ('python3.dll',
    'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\python3.dll',
    'BINARY'),
-  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\RECORD',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\RECORD',
-   'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
-   'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
-   'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
-   'DATA'),
-  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
-   'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\REQUESTED',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\REQUESTED',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\REQUESTED',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\RECORD',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\RECORD',
    'DATA'),
   ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\INSTALLER',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\METADATA',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\top_level.txt',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.7.1.dist-info\\WHEEL',
    'DATA'),
   ('setuptools\\_vendor\\jaraco\\text\\Lorem ipsum.txt',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
    'ipsum.txt',
    'DATA'),
-  ('certifi\\py.typed',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\certifi\\py.typed',
-   'DATA'),
   ('certifi\\cacert.pem',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\certifi\\cacert.pem',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\certifi\\cacert.pem',
+   'DATA'),
+  ('certifi\\py.typed',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\certifi\\py.typed',
    'DATA'),
   ('base_library.zip',
    'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\build\\netwatch_agent\\base_library.zip',
+   'Pratama\\App\\monitly\\backend\\agent\\build\\netwatch_agent\\base_library.zip',
    'DATA')],
  [],
  False,
  False,
- 1773381605,
+ 1773629610,
  [('runw.exe',
-   'C:\\Users\\rizky\\Documents\\Rizky '
-   'Pratama\\App\\netwatch-backend\\agent\\venv\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\runw.exe',
+   'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\runw.exe',
    'EXECUTABLE')],
  'C:\\Users\\rizky\\AppData\\Local\\Programs\\Python\\Python314\\python314.dll')
