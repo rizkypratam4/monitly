@@ -205,6 +205,16 @@ erDiagram
         number timestamp
     }
 
+    CONNECTIONS {
+        string _id PK
+        string device_id FK
+        string protocol
+        string local_addr
+        string remote_addr
+        string status
+        number timestamp
+    }
+
     USERS {
         string _id PK
         string username
@@ -215,6 +225,7 @@ erDiagram
 
     DEVICES ||--o{ METRICS : "punya"
     DEVICES ||--o{ PROCESSES : "punya"
+    DEVICES ||--o{ CONNECTIONS : "punya"
     DEVICES ||--o{ ALERTS : "punya"
     DEVICES ||--o{ LOGS : "punya"
 ```
